@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>お買い物かご - ねっとのやおや</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+</head>
+
+<body>
+	<div id="container">
+		<header id="top">
+			<nav>
+				<ul class="page">
+					<li><a href="news.html">NEWS</a></li>
+					<li><a href="foods.html">FOODS</a></li>
+					<li><a href="gift.html">GIFT</a></li>
+					<li><a href="company.html">COMPANY</a></li>
+				</ul>
+				<ul class="home">
+					<li><img src="images/icon-login.svg" alt="ログインアイコン"></li>
+					<li><a href="login.html">LOGIN</a></li>
+					<li><img src="images/icon-cart.svg" alt="カートアイコン"></li>
+					<li><a href="cart.html">CART</a></li>
+				</ul>
+			</nav>
+		</header>
+        
+		<div class="top-nav">
+        	<ol>
+            	<li><a href="index.html">HOME<span>&lt;</span></a></li>
+                <li>CART</li>
+            </ol>
+        </div>
+		<section id="cart-page">
+			<h1>CART<span>お買い物かご</span></h1>
+			<div class="cart-main">
+				<div class="cart-title">
+					<p>商品内容</p>
+					<p>価格</p>
+					<p>数量</p>
+					<p>小計</p>
+				</div>
+				<div class="cart-item">
+					<p><img src="images/giftset-1.jpg" alt="購入商品"></p>
+					<p>おまかせギフトセット1</p>
+					<p id="output"></p>
+					<p>2</p>
+					<p id="output2"></p>
+				</div>
+				<div class="cart-item">
+					<p><img src="images/giftset-3.jpg" alt="購入商品"></p>
+					<p>おまかせギフトセット3</p>
+					<p id="output3"></p>
+					<p>1</p>
+					<p id="output4"></p>
+				</div>
+				<div class="cart-total">
+					 <p>合計金額</p>
+					 <p id="output5"></p>
+				</div>
+			</div>
+            <div class="link">
+				<p><a href="foods.html">買い物を続ける</a></p>
+            	<p><a href="#">購入手続きへ進む</a></p>
+			</div>
+		</section>
+	
+		<footer>
+			<h1><img src="images/logo2.svg" alt="ねっとのやおやロゴ"></h1>
+			<div class="nav">
+				<a href="index.html">
+					<p class="item_en">TOP</p>
+					<p class="item_ja">トップページ</p>
+				</a>
+				<a href="news.html">
+					<p class="item_en">NEWS</p>
+					<p class="item_ja">お知らせ</p>
+				</a>
+				<a href="foods.html">
+					<p class="item_en">FOODS</p>
+					<p class="item_ja">商品一覧</p>
+				</a>
+				<a href="gift.html">
+					<p class="item_en">GIFT</p>
+					<p class="item_ja">贈り物</p>
+				</a>
+				<a href="company.html">
+					<p class="item_en">COMPANY</p>
+					<p class="item_ja">法人の方</p>
+				</a>
+			</div>
+			<ul>
+				<li><a href="guide.html">ご利用ガイド</a></li>
+				<li><a href="enquiry.html">お問い合わせ</a></li>
+			</ul>
+			<p class="top"><a href="#top">↑</a></p>
+			<p class="copy"><small>&copy;net-no-yaoya</small></p>
+		</footer>
+	</div>	
+	<script src="js/money.js"></script>
+</body>
+</html>

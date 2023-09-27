@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>法人のお客様 - ねっとのやおや</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+</head>
+
+<body>
+	<div id="container">
+		<header id="top">
+			<nav>
+				<ul class="page">
+					<li><a href="news.html">NEWS</a></li>
+					<li><a href="foods.html">FOODS</a></li>
+					<li><a href="gift.html">GIFT</a></li>
+					<li><a href="company.html">COMPANY</a></li>
+				</ul>
+				<ul class="home">
+					<li><img src="images/icon-login.svg" alt="ログインアイコン"></li>
+					<li><a href="login.html">LOGIN</a></li>
+					<li><img src="images/icon-cart.svg" alt="カートアイコン"></li>
+					<li><a href="cart.html">CART</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+        <div class="top-nav">
+        	<ol>
+            	<li><a href="index.html">HOME<span>&lt;</span></a></li>
+                <li>COMPANY</li>
+            </ol>
+        </div>
+		<section id="company-page">
+			<h1>COMPANY<span>法人のお客様へ</span></h1>
+			<p>法人のお客様に限り、卸販売をしております。ご希望の方は下記のお問い合わせフォームからご連絡ください。<br>担当者より土日祝を除いて２～３日以内にメールでご連絡させて頂きます。</p>
+			<form class="inquiry">
+				<label><p>法人名・店名<span>必須</span></p><input type="text" name="company" required></label>
+				<label><p>氏名<span>必須</span></p><input type="text" name="name" required></label>
+				<label><p>ふりがな<span>必須</span></p><input type="text" name="ruby" required></label>
+				<label><p>メール<span>必須</span></p><input type="email" name="mail" required></label>
+				<label><p>電話番号</p><input type="tel" name="tel"></label>
+				<div class="radio"><p>お問い合わせの種類</p>
+					<label><input type="radio" name="kind" value="0">卸販売希望</label>
+					<label><input type="radio" name="kind" value="1">その他</label></div>
+				<label><p>お問い合わせの内容<br><span>その他の方は必須</span></p><textarea name="comment"></textarea></label>
+				<input type="submit" value="送信する">
+			</form>
+		</section>
+	
+		<footer>
+			<h1><img src="images/logo2.svg" alt="ねっとのやおやロゴ"></h1>
+			<div class="nav">
+				<a href="index.html">
+					<p class="item_en">TOP</p>
+					<p class="item_ja">トップページ</p>
+				</a>
+				<a href="news.html">
+					<p class="item_en">NEWS</p>
+					<p class="item_ja">お知らせ</p>
+				</a>
+				<a href="foods.html">
+					<p class="item_en">FOODS</p>
+					<p class="item_ja">商品一覧</p>
+				</a>
+				<a href="gift.html">
+					<p class="item_en">GIFT</p>
+					<p class="item_ja">贈り物</p>
+				</a>
+				<a href="company.html">
+					<p class="item_en">COMPANY</p>
+					<p class="item_ja">法人の方</p>
+				</a>
+			</div>
+			<ul>
+				<li><a href="guide.html">ご利用ガイド</a></li>
+				<li><a href="enquiry.html">お問い合わせ</a></li>
+			</ul>
+			<p class="top"><a href="#top">↑</a></p>
+			<p class="copy"><small>&copy;net-no-yaoya</small></p>
+		</footer>
+	</div>	
+</body>
+</html>

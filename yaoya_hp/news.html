@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ねっとのやおや</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
+</head>
+
+<body>
+	<div id="container">
+		<header id="top">
+			<nav>
+				<ul class="page">
+					<li><a href="news.html">NEWS</a></li>
+					<li><a href="foods.html">FOODS</a></li>
+					<li><a href="gift.html">GIFT</a></li>
+					<li><a href="company.html">COMPANY</a></li>
+				</ul>
+				<ul class="home">
+					<li><img src="images/icon-login.svg" alt="ログインアイコン"></li>
+					<li><a href="login.html">LOGIN</a></li>
+					<li><img src="images/icon-cart.svg" alt="カートアイコン"></li>
+					<li><a href="cart.html">CART</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+        <div class="top-nav">
+        	<ol>
+            	<li><a href="index.html">HOME<span>&lt;</span></a></li>
+                <li>NEWS</li>
+            </ol>
+        </div>
+        <section id="news-page">
+        	<h1>NEWS<span>お知らせ</span></h1>
+            <ul class="accordion-area">
+            	<li>
+                	<section class="news-block">
+                    	<h2 class="title"><time datetime="2023-06-15">2023.06.15</time>お中元のご注文受付を開始しました。</h2>
+                        <div class="box">
+                        	<p>今年もお中元のご注文受付が始まりました。<br>お世話になっている方へ、最高のフルーツを送りませんか？</p>
+                        </div>
+                    </section>
+                    <section class="news-block">
+                    	<h2 class="title"><time datetime="2023-02-15">2023.02.15</time>配送料が変わりました。</h2>
+                        <div class="box">
+                        	<p>離島への配送料が変更になりました。<br>変更前→800円<strong>変更後→1,000円</strong></p>
+                        </div>
+                    </section>
+                    <section class="news-block">
+                    	<h2 class="title"><time datetime="2022-11-15">2022.11.15</time>お歳暮のご注文受付を開始しました。</h2>
+                        <div class="box">
+                        	<p>今年もお歳暮のご注文受付が始まりました。<br>お世話になっている方へ、最高のフルーツを送りませんか？</p>
+                        </div>
+                    </section>
+                </li>
+            </ul>
+        </section>
+	
+		<footer>
+			<h1><img src="images/logo2.svg" alt="ねっとのやおやロゴ"></h1>
+			<div class="nav">
+				<a href="index.html">
+					<p class="item_en">TOP</p>
+					<p class="item_ja">トップページ</p>
+				</a>
+				<a href="news.html">
+					<p class="item_en">NEWS</p>
+					<p class="item_ja">お知らせ</p>
+				</a>
+				<a href="foods.html">
+					<p class="item_en">FOODS</p>
+					<p class="item_ja">商品一覧</p>
+				</a>
+				<a href="gift.html">
+					<p class="item_en">GIFT</p>
+					<p class="item_ja">贈り物</p>
+				</a>
+				<a href="company.html">
+					<p class="item_en">COMPANY</p>
+					<p class="item_ja">法人の方</p>
+				</a>
+			</div>
+			<ul>
+				<li><a href="guide.html">ご利用ガイド</a></li>
+				<li><a href="enquiry.html">お問い合わせ</a></li>
+			</ul>
+			<p class="top"><a href="#top">↑</a></p>
+            <p class="copy"><small>&copy;net-no-yaoya</small></p>
+		</footer>
+	</div>	
+	<script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+	<script>
+		ScrollReveal({
+			reset: false,
+			distance: "100px",
+				duration: 2000
+		});
+		ScrollReveal().reveal('.accordion-area .news-block', { delay: 500, origin: "left", interval: 500 });
+	</script>
+</body>
+</html>

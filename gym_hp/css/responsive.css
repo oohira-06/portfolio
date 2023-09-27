@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+body {
+	max-width: 850px;
+}
+.news a {
+	font-size: calc(16px + 4 * (100vw - 450px) / 400);
+}
+.access_flex {
+	display: flex;
+}
