@@ -1,532 +1,950 @@
 @charset "utf-8";
+/* CSS Document */
 * {
 	margin: 0;
 	padding: 0;
 }
 body {
-	background-image: linear-gradient(180deg, rgba(0,160,223,0.4), rgba(29,32,136,0.6), rgba(168,0,163,0.5), rgba(241,158,0,0.5), rgba(255,241,0,0.5));
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	color: #333;
-	font-size: 14px;
+	background-color: #F7F7F7;
+	max-width: 450px;
+	overflow-x: hidden;
 	box-sizing: border-box;
 }
-
-.loading_box {
-	background-color: #8F8FBC;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	inset: 0;
-	z-index: 100;
-}
-.loading {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 0;
-	transform: translate(-110px, -62px);
-	font-size: 30px;
-	color: #fff;
-	font-family: 'Pompiere', cursive;
-	white-space:nowrap;
-	overflow:hidden;
-	letter-spacing: 2px;
-	text-shadow: 3px 3px #333;
-	animation:loading 20s .3s ease-out;
-}
-@keyframes loading {
-	from {
-		width:0%;
-	}
-	to {
-		width:100%;
-	}
-}
-.loading_box.hide {
-  opacity: 0;
-  visibility: hidden;
-  transition-delay: 2s;
-  transition-duration: 5s;
-}
-
-/*　ーーーーーーーーーーーーーーーートップページーーーーーーーーーーーーーーーー　*/
-
-.main-box {
-	margin: 4vh auto;
-	width: 85vw;
-	background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(15px);
-    border-radius: 30px;
-	border: 0.5px solid #ddd;
-	box-shadow: 3px 3px 10px 10px rgba(1, 1, 1, 0.05);
-}
 header {
-	padding: 20px 30px 30px;
-}
-header h1 {
-	margin: 0 0 30px 8vw;
-	font-family: 'Pompiere', cursive;
-	font-size: 38px;
-}
-header h1 a {
-	letter-spacing: 2px;
-	text-decoration: none;
-	color: #333;
-} 
-.icon-flex img {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
-}
-.icon-flex a img:hover, header h1 a:hover {
-	opacity: 0.9;
-}
-nav {
-	width: 600px;
-	height: 55px;
-	background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 30px;
-	border: 0.5px solid #ddd;
-	box-shadow: 2px 2px 8px 8px rgba(5, 5, 5, 0.05);
-}
-.icon-flex, .nav_flex {
+	height: 7vh;
+	width: 100vw;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
+	box-shadow: 0px 1px 4px #ccc;
+	background-color: #F7F7F7;
 }
-.nav_flex {
-	text-align: center;
-	padding: 5px;
+header h1 img {
+	width: 35vw;
+	vertical-align: middle;
+	margin-left: 5vw;
 }
-.nav_flex li {
-	width: 120px;
+.nav_links {
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	height: 100vh;
+	top: 7vh;
+	width: 100vw;
+	background-color: #000000;
+	opacity: 0.8;
+	transform: translateX(100%);
+	transition: all 0.5s;
+}
+.nav_links li {
 	list-style-type: none;
+	margin-top: 60px;
+	margin-left: 15vw;
+	opacity: 0;
 }
-.nav_flex li a {
-	font-size: 15px;
+.nav_links li span {
+	margin-left: 2vw;
+	font-size: 0.8em;
+}
+.nav_links li a {
 	display: block;
 	text-decoration: none;
-	color: #333;
-	transition: .3s;
+	color: #fff;
+	font-weight: bold;
 }
-.nav_flex li a:hover {
-	letter-spacing: 2px;
+.nav_links li a:hover {
+	color: #c54549;
 }
-.top_about {
-	margin: 0 20px 20px 10vw;
+.nav_active {
+	transform: translateX(0%);
 }
-.top_about h2 {
-	font-family: 'Pompiere', cursive;
-	font-size: 36px;
+@keyframes navLinksFade {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
-.link {
-	margin: 0 0 0 30px;
-	font-family: 'Pompiere', cursive;
-	font-size: 20px;
-	color: #333;
+.burger {
+	margin-right: 5vw;
 }
-.mockup {
-	padding: 25px;
-	margin: 0 auto;
-	width: 70vw;
-	display: flex;
-	justify-content: space-around;
-}
-.mockup > div {
-	background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-	border: 0.5px solid #ddd;
-	box-shadow: 2px 2px 8px 8px rgba(5, 5, 5, 0.05);
-}
-.mockup p a {
-	display: block;
-	border: 0.5px solid #ddd;
-	overflow: hidden;
-}
-.mockup p a img {
-	transition: .7s;
-}
-.mockup p a img:hover {
-	transform: scale(1.2);
-}
-.heart_icon {
-	color: #333;
-	padding: 10px 0 15px 10px;
-	height: 40px;
-	display: flex;
-	align-items: center;
-}
-.heart_icon img {
-	width: 20px;
-	height: 20px;
+.burger div {
 	cursor: pointer;
+	width: 25px;
+	height: 3px;
+	background-color: #c54540;
+	margin: 5px;
+	transition: all 0.5s;
 }
-.heart_icon span {
-	margin: 0 15px 0 10px;
+.toggle .line1 {
+	transform: rotate(-45deg) translate(-5px, 6px);
 }
-footer {
-	padding: 20px 30px;
+.toggle .line2 {
+	opacity: 0;
 }
-footer p {
-	text-align: center;
+.toggle .line3 {
+	transform: rotate(45deg) translate(-5px, -6px);
 }
-
-/*　ーーーーーーーーーーーーーーーートップページーーーーーーーーーーーーーーーー　*/
-/*　ーーーーーーーーーーーーーーーーサイトページーーーーーーーーーーーーーーーー　*/
-
-.works{
-	width: 80vw;
-	margin: 20px auto;
-	display: flex;
-	justify-content: space-around;
+footer h2 {
+	margin-bottom: 5px;
+	margin-left: 20px;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 }
-.concept {
-	width: calc(300px + 300 * (100vw - 1200px) / 720);
-	padding: 20px;
-	background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-    border-radius: 30px;
-	border: 0.5px solid #ddd;
-	box-shadow: 2px 2px 8px 8px rgba(5, 5, 5, 0.05);
-	color: #333;
-}
-.concept h2 {
-	margin-bottom: 10px;
-	font-family: 'Pompiere', cursive;
-	font-size: 30px;
-}
-.concept h2 span {
-	font-size: 20px;
+footer h2 span {
+	font-size: 14px;
 	margin-left: 10px;
 }
-.hidden {
-	display: none;
+.access_img img {
+	width: 100vw;
+	vertical-align: bottom;
 }
-.concept p {
+.access_flex {
+	margin: 10px;
+}
+.access_flex div:first-child {
 	margin-bottom: 10px;
 }
-.concept p span {
-	font-weight: bold;
-	font-size: 15px;
+.access_flex div p:first-child::before {
+	content: "〒";
 }
-.concept p:last-child {
-	margin: 10px 0 0;
+.access_flex div p:last-child {
+	font-size: 14px;
+	margin-top: 5px;
 }
-.site1 {
-	margin: 20px 0 120px;
+.access_flex div p:last-child::before {
+	content: "※";
 }
-.scroll {
-	position: relative;
-	width: 668px;
-	height: 495px;
-	overflow-y: auto;
-	z-index: 10;
-	margin-left: 15px;
-}
-.fixed {
-	position: absolute;
-	top: 331px;
-	z-index: 1;
-}
-
-/*　ーーーーーーーーーーーーーーーーサイトページーーーーーーーーーーーーーーーー　*/
-/*　ーーーーーーーーーーーーーーーーその他ページーーーーーーーーーーーーーーーー　*/
-
-.other_flex {
-	padding: 25px;
-	display: flex;
-	width: 75vw;
-	margin: 0 auto;
-}
-.other_grid1, .other_grid2 {
-	display: grid;
-	grid-template: repeat(3, auto) / repeat(2, auto);
-	gap: 15px 15px;
-}
-.other_grid1 {
-	margin-right: 15px;
-}
-.other_grid1 > div, .other_grid2 > div, .other_top > div {
-	background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-	border: 0.5px solid #ddd;
-	box-shadow: 2px 2px 8px 8px rgba(5, 5, 5, 0.05);
-	object-fit: contain;
-}
-.other_grid1 {
-	width: 47%;
-}
-.other_right {
-	width: 53%;
-}
-.other_top {
-	display: grid;
-	grid-template: 56% / 44%;
-	gap: 15px;
-}
-.grid1, .grid5 {
-	grid-row: 1;
-	grid-column: 1;
-}
-.grid2 {
-	grid-row: 2;
-	grid-column: 1;
-}
-.grid3, .grid6 {
-	grid-row: 1;
-	grid-column: 2;
-}
-.grid4 {
-	grid-row: 2;
-	grid-column: 2;
-}
-.grid10 {
-	grid-row: 3;
-	grid-column: 1 / 3;
-}
-.grid7 {
-	grid-row: 2;
-	grid-column: 1 / 3;
-}
-.grid7 figure img {
-	width: 100%;
-}
-.grid8 {
-	grid-row: 3;
-	grid-column: 1;
-}
-.grid9 {
-	grid-row: 3;
-	grid-column: 2;
-}
-.other_flex figure {
-	position: relative;
-}
-.caption {
-	display: flex;
-	justify-content: space-around;
-	text-align: center;
-	align-items: center;
-	position: absolute;
-	inset: 0;
-	background-color: rgba(15, 15, 15, 0.8);
+.access_flex div:last-child {
+	background-color: #333;
+	padding: 15px;
 	color: #fff;
-	opacity: 0;
+}
+.access_flex div:last-child span::after {
+	content: "▶";
+}
+iframe {
+	width: 100vw;
+}
+.footer {
+	background-color: #373737;
+	padding: 20px 0 30px;
+}
+.footer p, .footer a {
+	color: #fff;
+	text-decoration: none;
+}
+.logo_flex {
+	margin: 0 30px 10px 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.logo_flex img {
+	width: 35vw;
+}
+.logo_flex p {
+	text-align: center;
+	line-height: 35px;
+}
+.logo_flex p:last-child {
+	position: fixed;
+	bottom: 25vh;
+	right: 5vw;
+}
+.logo_flex p a {
+	width: 35px;
+	height: 35px;
+	display: block;
+	color: #c54540;
+	font-weight: bold;
+	border: solid 1px #c54540;
+	border-radius: 50%;
 	transition: .5s;
 }
-.caption:hover {
-	opacity: 1;
+.logo_flex p a:hover {
+	background-color: #c54540;
+	color: #fff;
 }
-
-/*　ーーーーーーーーーーーーーーーーその他ページーーーーーーーーーーーーーーーー　*/
-/*　ーーーーーーーーーーーーーーーーaboutページーーーーーーーーーーーーーーーー　*/
-
-.about_page {
-	width: 78vw;
-	margin: 0 auto;
-	background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-	border: 0.5px solid #ddd;
-	box-shadow: 2px 2px 8px 8px rgba(5, 5, 5, 0.05);
-	border-radius: 20px;
-	padding: 30px;
-	color: #333;
+.nav1 {
+	margin-bottom: 10px;
 }
-.about_page h2, .about_page h3 {
-	font-family: 'Pompiere', cursive;
-	font-size: 24px;
-	margin-bottom: 5px;
-	letter-spacing: 1px;
+.nav2 {
+	margin-bottom: 20px;
 }
-.about_page h2 span {
-	margin-left: 15px;
-	font-size: 22px;
-	letter-spacing: 1px;
-}
-.bottom_about {
-	margin-bottom: 25px;
-}
-.about_flex {
+.nav_flex {
 	display: flex;
-	justify-content: space-around;
+	margin: 0 auto;
+	justify-content: space-between;
 }
-.skill_flex {
+.nav_flex li {
+	list-style-type: none;
+	padding-right: 3vw;
+}
+.nav_flex li a {
+	font-size:12px;
+	display: block;
+}
+.icon_flex {
+	width: 40vw;
+	margin: 30px auto 0;
+	display: flex;
+	justify-content: space-between;
+}
+.icon_flex div img {
+	width: 30px;
+}	
+.icon_flex div a:hover img {
+	transform: translateY(-3px);
+}
+footer > p {
+	background-color: #373737;
+	text-align: center;
+	padding-bottom: 10px;
+	color: #fff;
+}
+/*ここまでベース*/
+
+/*ここからトップページ*/
+.top_visual {
+	width: 100vw;
+	height: 95vh;
+	background-size: cover;
+	background-image: url(../images/main_visual.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.news {
+	width: 88vw;
+	height: 50px;
+	margin: 40px auto;
+	text-align: center;
+	background-color: #ccc;
+	box-shadow: 3px 3px #c54540;
+	line-height: 50px;
+	font-size: 14px;
+	transition: 0.3s;
+}
+.news span {
+	margin-right: 13px;
+}
+.news a {
+	font-size: calc(11px + 4 * (100vw - 360px) / 90);
+	color: #000;
+	text-decoration: none;
+}
+.news:hover {
+	opacity: 0.7;
+}
+.about, .trainer {
+	width: 85vw;
+	margin: 0 auto 40px;
+}
+.trainer h2  {
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size: 24px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #c54540;
+}
+.about h2 {
+	position: relative;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size: 24px;
+	margin-bottom: 15px;
+	padding-bottom: 5px;
+	border-bottom: 2px solid #c54540;
+}
+.about p {
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.button1 a {
+	width: 150px;
+	border: 2px solid #c54540;
+	margin: 0 0 0 auto;
+	padding: 8px;
+	font-weight: bold;
+	display: block;
+	text-decoration: none;
+	color: #c54540;
+	font-size: 12px;
+	position: relative;
+	z-index: 1;
+	transition: .3s;
+}
+.button1 a::after {
+	content: "▶";
+}
+.button1 a::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+  	z-index: -1;
+  	background: #c54540;
+  	transform-origin: 100% 50%;
+  	transform: scaleX(0);
+  	transition: transform ease .3s;
+}
+.button1 a:hover {
+	color: #fff;
+}
+.button1 a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+.trainer figure {
+	width: 85vw;
+	height: 300px;
+	background-color: #ccc;
+	margin-bottom: 30px;
+}
+.trainer section p:first-of-type {
+	margin: 5px 0 10px;
+}
+.trainer section p:last-of-type {
+	font-size: 15px;
+}
+.top_point {
+	font-size: 13px;
+	width: 90vw;
+	margin: 0 auto 30px;
+}
+.top_flex {
+	margin: 0 auto 30px;
+	display: flex;
+	justify-content: space-between;
+}
+.top_flex:first-child {
+	margin-bottom: 10px;
+}
+.point {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: skew(-15deg,0deg);
+	margin: 5px;
+	background-color: #c54540;
+	width: 27vw;
+	height: 47px;
+	box-shadow: 2px 2px 5px #333;
+	color: #fff;
+}
+.point:last-child a::after {
+	content: "▶";
+}
+.top_flex a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+.top_flex:last-child div:last-child:hover {
+	opacity: 0.8;
+}
+/*ここまでトップページ*/
+
+/*ここから下層ページ共通*/
+.bottom_page {
+	margin-top: 9vh;
+	margin-bottom: 50px;
+}
+.breadcrumb {
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+.breadcrumb ol {
+	display: flex;
+}
+.breadcrumb ol li {
+	list-style-type: none;
+	margin-left: 5px;
+	font-size: 14px;
+}
+.breadcrumb ol li a {
+	text-decoration: none;
+	color: #000;
+	font-size: 14px;
+}
+.sub_img img {
+	width: 100vw;
+	vertical-align: bottom;
+}
+/*ここまで下層ページ共通*/
+
+/*ここから料金ページ*/
+.box, .box3_flex {
+	margin: 25px auto;
+	width: 85vw;
+}
+.box h3, .box3_flex h3 {
+	font-size: 15px;
+	font-weight: lighter;
+}
+.price_flex, .box3_flex {
 	display: flex;
 	align-items: center;
 }
-.skill_flex p {
-	width: 70px;
+.price_flex div span {
+	margin-right:7px;
+	font-size: 14px;
+	padding: 2px;
+	border: 1px solid #000;
 }
-.skill_flex div {
-	width: 200px;
-	height: 30px;
-	margin-left: 15px;
+.price_flex div {
+	font-size: 17px;
+	margin-right: 17px;
+	margin-top: 10px;
+}
+.box2 {
+	background-color: #343434;
+	padding: 15px;
+	font-size: 14px;
+	color: #fff;
+}
+.table {
+	margin-bottom: 20px;
+}
+.table:last-child {
+	margin-bottom: 0;
+}
+.table table {
+	line-height: 1.7;
+	width: 85vw;
+	margin: 0 auto;
+	table-layout: fixed;
+}
+.icon_position {
+	position: relative;
+}
+.table h4 {
+	font-size: 24px;
+	margin-bottom: 8px;
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+}
+.table caption {
 	margin-top: 5px;
-	background-color: rgba(140, 143, 196, 0.9);
-    backdrop-filter: blur(15px);
-	border: 0.5px solid #ddd;
+	caption-side: bottom;
+	font-weight: lighter;
 }
-.skill_flex:nth-child(3) div {
-	width: 180px;
+.table caption::before {
+	content: "※";
 }
-.skill_flex:nth-child(4) div {
-	width: 60px;
+.table table, .table th, .table td {
+	border-collapse: collapse;
+	border: 1px solid #fff;
 }
-.skill_flex:nth-child(5) div {
-	width: 180px;
+.table th, .table td {
+	font-weight: lighter;
 }
-.skill_flex:nth-child(6) div {
-	width: 120px;
+.ticket_table tr:nth-of-type(4) th {
+	border-top : none;
 }
-.certification {
+.ticket_table tr:nth-of-type(3) th {
+	border-bottom: none;
+}
+.ticket_table tr:nth-of-type(6) th {
+	border-top : none;
+}
+.ticket_table tr:nth-of-type(5) th {
+	border-bottom: none;
+}
+.icons {
+	width: 35px;
+	position: absolute;
+	left: -20px;
+	top: -15px;
+}
+.box3_flex {
+	justify-content: space-between;
+}
+.button2 a {
+	display: block;
+	padding: 7px;
+	font-size: 12px;
+	font-weight: bold;
+	border: 2px solid #c54540;
+	color: #c54540;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	transition: .3s;
+}
+.button2 a::after {
+	content: "▶";
+}
+.button2 a::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+  	z-index: -1;
+  	background: #c54540;
+  	transform-origin: 100% 50%;
+  	transform: scaleX(0);
+  	transition: transform ease .3s;
+}
+.button2 a:hover {
+	color: #fff;
+}
+.button2 a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+/*ここまで料金ページ*/
+
+/*ここからレビューページ*/
+.review_page section {
+	width: 85vw;
+	margin: 0 auto;
+	padding: 30px;
+}
+.review_page h3 {
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size: 16px;
+	padding-bottom: 3px;
+	margin-bottom: 8px;
+	border-bottom: 2px solid #c54540;
+}
+.review_flex p {
+	font-size: 15px;
+	margin-top: 10px;
+}
+.review_flex p img {
+	display: block;
+	background-color: #333;
+	width: 250px;
+	height: 15vh;
+	margin-right: 10px;
+}
+.review2, .review4 {
+	background-color: #ccc;
+}
+/*ここまでレビューページ*/
+
+/*ここから設備ページ*/
+.equipment_page section {
+	width: 85vw;
+	margin: 35px auto 0;
+}
+.equipment_page section h3 {
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-size: 24px;
+	padding-bottom: 3px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #c54540;
+}
+.figure div figure {
+	background-color: #ccc;
+	margin: 10px auto 0;
+	padding: 8px;
+}
+.figure figcaption {
+	font-size: 14px;
+	margin-top: 5px;
+}
+.figure figcaption span {
+	font-size: 16px;
+	line-height: 1.7;
+}
+.figure img {
+	margin: 0 auto;
+	width: 100%;
+}
+.list li {
+	list-style-type: none;
+}
+.list {
+	margin: 5px 0 20px 5px;
+}
+.amenity p {
+	text-align:center;
+	background-color: #c54540;
+	width: 110px;
+	padding: 3px;
+	color: #fff;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
+.amenity_flex {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.amenity_flex li {
+	list-style-type: none;
+	margin-left: 5vw;
+}
+/*ここまで設備ページ*/
+
+/*ここからトレーニング内容ページ*/
+.traning_page > p {
+	font-size: 15px;
+	width: 88vw;
+	margin: 20px auto;
+}
+.traning_page section {
+	width: 90vw;
+	margin: 0 auto;
+}
+.traning_page section h3 {
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	padding-bottom: 3px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #c54540;
+	font-size: 24px;
+}
+.traning_flex {
+	width: 85vw;
+	margin: 0 auto;
+}
+.traning {
+	background-color: #333;
+	padding: 8px;
+	display: flex;
+	justify-content: space-around;
+	margin: 15px;
+}
+.traning_box1 {
+	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-weight: bold;
+	font-size: 100px;
+	color: #666;
+	position: relative;
+	height: 100px;
+	line-height: 100px;
+}
+.traning_box1 div {
+	font-family: YuGothic, "Yu Gothic medium", "Hiragino Sans", Meiryo, "sans-serif";
+	font-weight: lighter;
+	width: 100px;
+	font-size: 14px;
+	color: #fff;
+	position: absolute;
+	top: 0;
+}
+.traning_box2 {
+	color: #fff;
+	font-size: 15px;
+	margin-left: calc(1px + 10 * (100vw - 360px) / 90);
+}
+.day {
+	margin-top: 5px;
 	margin-left: 10px;
+	border-left: solid 2px #c54540;
+	padding-left: 10px;
 }
-.certification ul {
-	margin-left: 20px;
+.day p::before {
+	content: "●";
+	font-size: 13px;
+	color: #c54540;
+	position: relative;
+	top: 0;
+	left: -5.5px;
+}
+.day p {
+	text-indent: -11px;
+	margin-top: 8px;
+}
+/*ここまでトレーニング内容ページ*/
+
+/*ここからお問合わせページ*/
+.contact_box {
+	font-size: 15px;
+	width: 88vw;
+	margin: 20px auto;
+}
+.contact_icon {
+	width: 50vw;
+	margin: 20px auto 0;
+	display: flex;
+	justify-content: space-around;
+}
+.contact_icon img {
+	width: 30px;
 }
 
+@media screen and (min-width: 450px) {
 
-@media screen and (max-width: 1400px) {
-	.concept {
-		width: calc(400px + 200 * (100vw - 1400px) / 520);
+	body {
+		max-width: 850px;
 	}
-	.scroll {
-		width: 429px;
-		height: 318px;
+	.news a {
+		font-size: calc(15px + 4 * (100vw - 450px) / 400);
+	}
+	.access_flex {
+		display: flex;
+		justify-content: space-between;
+	}
+	.nav_flex {
+		width: 450px;
+		margin: 0 auto 10px;
+	}
+	.nav1, .nav2 {
+		margin: 0 auto 20px;
+	}
+	.icon_flex {
+		margin-top: 35px;
+	}
+	.about p {
+		margin-bottom: 0;
+	}
+	.top_flex {
+		font-size: 13px;
+		margin: 0 auto 30px;
+	}
+	.top_flex div {
+		margin-right: 8px;
+	}
+	.traning {
+		padding: 14px;
+	}
+	.traning_box2 {
 		margin-left: 10px;
 	}
-	.fixed {
-		top: 349px;
+	.figure {
+		display: flex;
+		justify-content: space-around;
 	}
-	.fixed img {
-		width: 450px;
+	.figure div {
+		width: 47%;
+	}
+	.figure figure:nth-child(odd) {
+		margin-right: 2vw;
+	}
+	.figure figure:nth-child(even) {
+		height: 340px;
 	}
 }
 
-@media screen and (max-width: 1180px) {
-	.hidden {
-		display: block;
+@media screen and (min-width: 600px) {
+	.responsive_flex {
+		display: flex;
+		justify-content: space-around;
+	}
+	.trainer section {
+		width: calc(300px + 130 * (100vw - 450px) / 400);
+	}
+	.trainer figure {
+		width: 250px;
+		height: 230px;
+		margin-bottom: 30px;
+		margin-right: 20px;
+	}
+	.review_flex p {
+		margin-top: 0px;
+	}
+	.review_flex {
+		display: flex;
+		justify-content: space-around;
 	}
 }
 
-@media screen and (max-width: 1000px) {
-	header h1 {
-		margin: 0;
+@media screen and (min-width: 850px) {
+	body {
+		max-width: 1900px;
 	}
-	.icon-flex {
-		flex-direction: column;
-	}
-	nav {
-		margin-top: 20px;
-		width: 500px;
-	}
-	.works {
-		flex-direction: column-reverse;
-		justify-content: space-between;
-		width: 420px;
-		margin: 0 auto;
-	}
-	.concept {
-		width: 450px;
-	}
-	.hidden {
+	.burger {
 		display: none;
 	}
-	.fixed {
-		top: 378px;
-	}
-}
-
-@media screen and (max-width: 900px) {
-	.mockup {
-		flex-direction: column;
-	 	width: 500px;
-	}
-	.mockup div > p img {
-		width: 489px;
-	}
-	.other_flex {
-		flex-direction: column;
+	.nav_links {
+		height: 7vh;
+		top: 0;
+		width: 63vw;
+		background-color: #f7f7f7;
+		opacity: 1;
+		transform: translateX(0%);
+		display: flex;
+		justify-content: space-around;
 		align-items: center;
 	}
-	.other_grid1 {
-		margin-right: 0;
-		margin-bottom: 15px;
-	}
-	.other_grid1 {
-		width: 100%;
-	}
-	.other_right {
-		width: 100%;
-	}
-	.about_flex {
-		flex-direction: column;
-	}
-	.certification {
+	.nav_links li {
+		margin-top: 0;
 		margin-left: 0;
-		margin-top: 25px
+		opacity: 1;
 	}
-}
-
-@media screen and (max-width: 750px) {
-	.works {
-		width: 350px;
+	.nav_links li span {
+		display: none;
 	}
-	.concept {
-		width: calc(400px + 550 * (100vw - 750px) / 1170);
+	.nav_links li a {
+		color: #c54549;
+		transition: 0.5s;
 	}
-	.scroll {
-		width: 346px;
-		height: 256px;
-		margin-left: 8px;
+	.nav_links li a:hover {
+		color: #333;
 	}
-	.fixed {
-		top: 384px;
+	header h1 img {
+		width: 230px;
+		margin-left: 3vw;
 	}
-	.fixed img {
-		width: 362px;
+	.responsive {
+		display: flex;
 	}
-}
-
-@media screen and (max-width: 610px) {
-	nav {
-		width: 300px;
+	.access_img img {
+		width: 45vw;
 	}
-	.nav_flex li {
-		height: 80px;
-		font-size: 15px;
+	.access_flex {
+		margin-top: 0;
+		flex-direction: column;
+		justify-content: center;
 	}
-	.nav_flex li a:hover {
-		letter-spacing: -1px;
+	.access_flex div:first-child {
+		margin-left: 20px;
 	}
-	.mockup {
-	 	width: 310px;
+	.access_flex div:last-child {
+		margin-left: 20px;
 	}
-	.works {
-		width: 300px;
+	.logo_flex img {
+		width: 20vw;
 	}
-	.scroll {
-		width: 292px;
-		height: 213px;
-		margin-left: 5px;
-	}
-	.fixed {
-		top: 387px;
-	}
-	.fixed img {
-		width: 303px;
-	}
-	.hidden {
-		display: block;
-	}
-	.concept {
+	.nav_flex {
+		width: 600px;
 		margin: 0 auto;
-    	width: calc(320px + 550 * (100vw - 610px) / 1310);
 	}
-	.about_page {
-		padding: 20px;
+	.news {
+		width: 75vw;
+		height: 50px;
+		margin: 60px auto;
 	}
-	
+	.about, .trainer {
+		width: 75vw;
+		margin: 0 auto 60px;
+	}
+	.responsive2 {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.icon_flex {
+		width: 20vw;
+	}
+	.bottom_page {
+		margin-bottom: 70px;
+	}
+	.sub_img img {
+		width: 65vw;
+		margin: 0 auto;
+	}
+	.price_page {
+		position: absolute;
+	}
+	.price {
+		padding: 45px 0 20px 45px;
+		margin-bottom: 0;
+		background-color: #F7F7F7;
+		position: relative;
+		top: -15vh;
+		left: 35vw;
+	}
+	.box2 {
+		display: flex;
+		justify-content: space-around;
+	}
+	.table table {
+		line-height: 2.3;
+	}
+	.table table {
+		width: 40vw;
+	}
+	.box3_flex {
+		width: 60vw;
+		margin: 40px auto 60px;
+	}
+	.review_page h2 {
+		margin-bottom: 60px;
+	}
+	.line {
+		display: flex;
+	}
+	.line figure {
+		width: 500px;
+	}
+	.amenity_flex {
+		margin-bottom: 40px;
+	}
+	.traning_page > p {
+    	width: 65vw;
+    	margin: 50px auto;
+	}
+	.traning_flex {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.traning {
+		width: 350px;
+		margin: 0;
+		padding: 8px;
+	}
+	.contact {
+		margin-bottom: 0;
+	}
+	.contact_box {
+		width: 50vw;
+		padding: 45px 0 8px 45px;
+		margin-bottom: 0;
+		background-color: #F7F7F7;
+		position: relative;
+		top: -15vh;
+		left: 20vw;
+	}
+	.contact_icon {
+    	width: 40vw
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	.nav_links {
+		width: 55vw;
+	}
+	.top_visual {
+		margin: 0 auto;
+		width: 80vw;
+		background-size: cover;
+		background-image: url(../images/main_visual2.jpg);
+	}
+	.max_flex {
+		display: flex;
+		justify-content: space-between;
+	}
+	iframe {
+		width: 600px;
+	}
+	.top_point {
+		width: 70vw;
+	}
+	.box2 {
+		width: 90vw;
+		margin: 0 auto;
+	}
+	.review_flex p img {
+		width: 350px;
+		height: 20vh;
+	}
+	.equipment_page section {
+		width: 70vw;
+		margin-top: 50px;
+	}
+	.traning_page section {
+    	width: 80vw
+	}
+	.traning {
+		padding: 14px;
+	}
+}
+
+@media screen and (min-width: 1920px) {
+	.traning_page section {
+    	width: 70vw
+	}
 }

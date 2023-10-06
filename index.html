@@ -1,73 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Atma:wght@300&family=Exo&family=Loved+by+the+King&family=Neuton&family=Pompiere&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Ohira Hinako - portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>heart&amp;body｜大分のパーソナルトレーニングジム</title>
+<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css"/>
+<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div class="loading_box">
-	<div class="loading">Welcome to portfolio.<br>Now loading...</div>
-</div>   
-	<div class="main-box">
-		<header>
-			<h1><a href="index.html">PORTFOLIO</a></h1>
-			<div class="icon-flex">
-				<p><a href="index.html"><img src="images/about.jpg" alt="プロフィールアイコン"></a></p>
-				<nav>
-					<ul class="nav_flex">
-						<li><a href="works1.html">Works<br>Website1</a></li>
-						<li><a href="works2.html">Works<br>Website2</a></li>
-						<li><a href="other.html">Works<br>Other</a></li>
-						<li><a href="about.html">About &amp; Skill</a></li>
-					</ul>
-				</nav>
+	<header>
+		<h1><img src="images/logo.svg" alt="heart&body　大分のパーソナルトレーニングジム"></h1>
+		<nav>
+			<ul class="nav_links">
+				<li><a href="price.html">PRICE<span>料金</span></a></li>
+				<li><a href="review.html">REVIEW<span>お客様の声</span></a></li>
+				<li><a href="equipment.html">EQUIPMENT<span>設備</span></a></li>
+				<li><a href="training.html">TRAINING<span>トレーニング内容</span></a></li>
+				<li><a href="contact.html">CONTACT<span>お問合わせ</span></a></li>
+			</ul>
+			<div class="burger">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
 			</div>
-		</header>
-		
-		<main id="top">
-			<section class="top_about">
-				<h2>Ohira Hinako</h2>
-				<p>好きな事を仕事にしたいと思い、2023年3月に前職を退職。6月から10月にかけて職業訓練に通い、Web制作の基礎スキルを学んだ。<br>その中でコーディングが一番楽しいと思うようになり、コーダーとして働くべく、独学でJavaScriptも勉強中。<a href="about.html" class="link">Read More →</a></p>
-            </section>
-			<div class="mockup">
-				<div>
-					<p><a href="works1.html"><img src="images/img_top_hp.jpg" alt="ねっとのやおやのモックアップ"></a></p>
-					<div class="heart_icon">
-						<img src="images/heart.png" alt="ハート" id="click">
-						<span id="counter">0</span>
-						<p>Website1</p>
+		</nav>
+	</header>
+	
+    <main id="top">
+    	<div class="top_visual"></div>
+        <div class="news">
+        	<p><a href="price.html"><span>NEWS</span>2023年8月より貸し出しプランを開始しました</a></p>
+        </div>
+        <section class="about">
+        	<h2>完全個室の<br>パーソナルトレーニングジム</h2>
+            <p>筋トレ始めて本当に変わるかな？<br>やってても変わってるか分からない時もあると思います。<br>皆がそうで、未来の事は不確定でどうなるかは誰にも分かり
+ません。ただ、何事も挑戦してみないと現状より良くならない。<br>今の自分に満足していないならやるしかないです。<br>自分の可能性に挑戦しましょう！</p>
+			<div class="button1"><a href="contact.html">無料体験トレーニングのお申込みはこちら</a></div>
+        </section>
+        <section class="trainer">
+        	<h2>heart&amp;bodyのトレーナー</h2>
+            <div class="responsive_flex">
+                <figure><img src="#" alt="トレーナーの写真"></figure>
+                <section>
+                    <h3>阿比留&nbsp;雅浩</h3>
+                    <p>2022年8月にheart&amp;bodyをオープン</p>
+                    <p>私は筋トレと正しい食事で、体もですが顔がかなり変わりました！昔の友達と会う時も顔がかっこよくなったと言われるのが嬉しかったりします(笑)<br>あの時痩せると決意したことと、筋トレを始めたことは今までの人生で１ 番良かった決断だと思っています。</p>
+                </section>
+            </div>
+        </section>
+        <div class="top_point">
+        	<div class="top_flex">
+                <div class="point">入会費無料</div>
+                <div class="point">年会費無料</div>
+                <div class="point">無料体験<br>トレーニング</div>
+            </div>
+            <div class="top_flex">
+                <div class="point">見学無料</div>
+                <div class="point">カウンセリング<br>無料</div>
+                <div class="point"><a href="price.html">PRICE<br>料金を見る</a></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    	<section>
+        	<h2>ACCESS<span>アクセス</span></h2>
+			<div class="max_flex">
+            	<div class="responsive">
+					<div class="access_img"><img src="images/access.JPG" alt="店舗写真"></div>
+					<div class="access_flex">
+						<div>
+							<p>870-0101</p>
+							<p>大分市鶴崎1-1-3&nbsp;MR駅前ビル</p>
+							<p><span>駐車場</span>あり(23番)</p>
+							<p><span>営業</span>8:00～22:00(水・日休み)</p>
+							<p>営業日、営業時間共にご相談いただければ上記以外でもお受け出来ます。</p>
+						</div>
+						<div>MOVIE<br>駐車場(ジムから徒歩1分のAPパーク)<br>入って右側、奥から3番目です。</div>
 					</div>
-				</div>
-				<div>
-					<p><a href="works2.html"><img src="images/img_top_hp2.jpg" alt="heart&bodyのモックアップ"></a></p>
-					<div class="heart_icon">
-						<img src="images/heart.png" alt="ハート" id="click2">
-						<span id="counter2">0</span>
-						<p>Website2</p>
-					</div>
-				</div>
-				<div>
-					<p><a href="other.html"><img src="images/img-top-banner.jpg" alt="その他制作物"></a></p>
-					<div class="heart_icon">
-						<img src="images/heart.png" alt="ハート" id="click3">
-						<span id="counter3">0</span>
-						<p>その他制作物(Bannerなど)</p>
-					</div>
-				</div>	
+            	</div>
+            	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d834.2346513786119!2d131.6879806986318!3d33.24191179110993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35469dfb1989c0b7%3A0xd9f2c78c95529981!2z44CSODcwLTAxMDEg5aSn5YiG55yM5aSn5YiG5biC5Lit6ba05bSO77yR5LiB55uu77yR4oiS77yTIE1y6aeF5YmN44OT44Or!5e0!3m2!1sja!2sjp!4v1695091102724!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
-		</main>
-		
-		<footer>
-			<p><small>&copy;2023 Ohira Hinako Portfolio</small></p>
-		</footer>
-	</div>
-<script src="js/loading.js"></script>
+        </section>
+        <div class="footer">
+        	<div class="logo_flex">
+            	<p><img src="images/logo.svg" alt="heart&bodyのロゴ"></p>
+                <p><a href="#top">↑</a></p>
+            </div>
+            <div class="nav1">
+            	<ul class="nav_flex">
+                	<li><a href="index.html">TOP<br>トップページ</a></li>
+                    <li><a href="price.html">PRICE<br>料金</a></li>
+                    <li><a href="review.html">REVIEW<br>お客様の声</a></li>
+                    <li><a href="equipment.html">EQUIPMENT<br>設備</a></li>
+				</ul>
+             </div>
+             <div class="nav2">
+                <ul class="nav_flex">
+                    <li><a href="training.html">TRAINING<br>トレーニング内容</a></li>
+                    <li><a href="contact.html">CONTACT<br>お問合わせ・ご予約</a></li>
+                    <li><a href="#">PRIVACY POLICY<br>個人情報保護方針</a></li>
+                </ul>
+            </div>
+            <div class="icon_flex">
+            	<div><a href="mailto:abr09121993@gmail.com"><img src="images/mail_icon_w.png" alt="メールを送る"></a></div>
+                <div><a href="https://www.instagram.com/heart.body01/" target="_blank"><img src="images/insta_icon_w.png" alt="インスタでDMを送る"></a></div>
+                <div><a href="tel:080-1777-7401"><img src="images/tel_icon_w.png" alt="電話をする"></a></div>
+            </div>
+        </div>
+        <p><small>&copy;2023 heart&amp;body</small></p>
+    </footer>
 <script src="js/script.js"></script>
 </body>
 </html>
