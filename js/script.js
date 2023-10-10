@@ -1,21 +1,36 @@
-// JavaScript Document
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav_links');
-const navLinks = document.querySelectorAll('.nav_links li');
+'use strict';
+{
+	let n = 0;
 
-burger.addEventListener('click', () => {
-	nav.classList.toggle('nav_active');
-	
-	navLinks.forEach((link, index) => {
-		if(link.style.animation) {
-			link.style.animation = "";
-		} else {
-			link.style.animation = `navLinksFade 0.5s ease forwards ${
-				index / 7 + 0.4
-			}s`;
-		}
+	const heart = document.getElementById('click');
+	const counter = document.getElementById('counter');
+
+	heart.addEventListener('click', () => {
+		n++;
+		counter.textContent = n;
 	});
-	burger.classList.toggle('toggle');
-});
+}
 
+{
+	let n = 0;
 
+	const heart = document.getElementById('click2');
+	const counter = document.getElementById('counter2');
+
+	heart.addEventListener('click', () => {
+		n++;
+		counter.textContent = n;
+	});
+}
+
+{
+	let n = 0;
+
+	const heart = document.getElementById('click3');
+	const counter = document.getElementById('counter3');
+
+	heart.addEventListener('click', () => {
+		n++;
+		counter.textContent = n;
+	});
+}
