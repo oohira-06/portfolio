@@ -95,7 +95,7 @@ header h1 img {
 footer h2 {
 	margin-bottom: 5px;
 	margin-left: 20px;
-	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-family:"MS P明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 }
 footer h2 span {
 	font-size: 14px;
@@ -111,9 +111,6 @@ footer h2 span {
 .access_flex div:first-child {
 	margin-bottom: 10px;
 }
-.access_flex div p:first-child::before {
-	content: "〒";
-}
 .access_flex div p:last-child {
 	font-size: 14px;
 	margin-top: 5px;
@@ -128,6 +125,10 @@ footer h2 span {
 }
 .access_flex div:last-child span::after {
 	content: "▶";
+}
+.park-movie a {
+	color: #fff;
+	text-decoration: none;
 }
 iframe {
 	width: 100vw;
@@ -216,7 +217,6 @@ footer > p {
 	height: 95vh;
 	background-size: cover;
 	background-image: url(../images/main_visual.jpg);
-	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -247,7 +247,7 @@ footer > p {
 	margin: 0 auto 40px;
 }
 .trainer h2  {
-	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-family:"MS P明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 	font-size: 24px;
 	margin-bottom: 15px;
 	padding-bottom: 5px;
@@ -255,7 +255,7 @@ footer > p {
 }
 .about h2 {
 	position: relative;
-	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-family:"MS P明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 	font-size: 24px;
 	margin-bottom: 15px;
 	padding-bottom: 5px;
@@ -423,10 +423,13 @@ footer > p {
 	margin: 0 auto;
 	table-layout: fixed;
 }
+.icon_position {
+	position: relative;
+}
 .table h4 {
 	font-size: 24px;
 	margin-bottom: 8px;
-	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-family:"MS P明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 }
 .table caption {
 	margin-top: 5px;
@@ -454,6 +457,13 @@ footer > p {
 }
 .ticket_table tr:nth-of-type(5) th {
 	border-bottom: none;
+}
+.icons {
+	width: 35px;
+	position: absolute;
+	left: -20px;
+	top: -15px;
+	z-index: 10;
 }
 .box3_flex {
 	justify-content: space-between;
@@ -502,7 +512,7 @@ footer > p {
 	padding: 30px;
 }
 .review_page h3 {
-	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-family:"MS P明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 	font-size: 16px;
 	padding-bottom: 3px;
 	margin-bottom: 8px;
@@ -530,7 +540,7 @@ footer > p {
 	margin: 35px auto 0;
 }
 .equipment_page section h3 {
-	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-family:"MS p明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 	font-size: 24px;
 	padding-bottom: 3px;
 	margin-bottom: 15px;
@@ -608,7 +618,7 @@ footer > p {
 	margin: 15px;
 }
 .traning_box1 {
-	font-family:"ＭＳ Ｐ明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
+	font-family:"MS p明朝", "MS PMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", serif;
 	font-weight: bold;
 	font-size: 100px;
 	color: #666;
@@ -642,7 +652,7 @@ footer > p {
 	color: #c54540;
 	position: relative;
 	top: 0;
-	left: -7px;
+	left: -5.5px;
 }
 .day p {
 	text-indent: -11px;
@@ -715,7 +725,7 @@ footer > p {
 		margin-right: 2vw;
 	}
 	.figure figure:nth-child(even) {
-		height: 290px;
+		height: 340px;
 	}
 }
 
@@ -740,19 +750,47 @@ footer > p {
 		display: flex;
 		justify-content: space-around;
 	}
-	.line figure {
-		width: 300px;
-	}
 }
 
 @media screen and (min-width: 850px) {
-	
 	body {
 		max-width: 1900px;
 	}
+	.burger {
+		display: none;
+	}
+	.nav_links {
+		height: 7vh;
+		top: 0;
+		width: 63vw;
+		background-color: #f7f7f7;
+		opacity: 1;
+		transform: translateX(0%);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.nav_links li {
+		margin-top: 0;
+		margin-left: 0;
+		opacity: 1;
+	}
+	.nav_links li span {
+		display: none;
+	}
+	.nav_links li a {
+		color: #c54549;
+		transition: 0.5s;
+	}
+	.nav_links li a:hover {
+		color: #333;
+	}
 	header h1 img {
-		width: 260px;
+		width: 230px;
 		margin-left: 3vw;
+	}
+	.top_visual {
+		background-attachment: fixed;
 	}
 	.responsive {
 		display: flex;
@@ -869,9 +907,10 @@ footer > p {
 	}
 }
 
-
 @media screen and (min-width: 1366px) {
-	
+	.nav_links {
+		width: 55vw;
+	}
 	.top_visual {
 		margin: 0 auto;
 		width: 80vw;
